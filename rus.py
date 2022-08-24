@@ -35,17 +35,17 @@ while True:
             name = input("Имя:")
             name = name + ".csv"
             print(f"Новый файл - [cyan]{name}")
-            po = input("Число колонок:")
+            po = input("Кол-во колонок:")
             try:
                 ndf = int(po)
             except:
-                print("Ошибка")
+                print("Error")
             with open(name, mode='w') as file:
                 while True:
-                    cell2 = input(f"(/quit)Введите {ghdf}({ndf} осталось):")
+                    cell2 = input(f"Введите {ghdf}(или /quit)({ndf} осталось):")
                     if gas == True:
                         if ui == cell2:
-                            print("Wrong cell text")
+                            print("Неправильный текст")
                             continue
                     if cell2 == "/quit":
                         agh = True
